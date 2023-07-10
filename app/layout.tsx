@@ -1,9 +1,9 @@
 import Header from '@/components/header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'TicketE',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={`${inter.className} px-40 text-grayscale-g-2`}>
+			<body className={`${openSans.className} px-40 text-grayscale-g-2`}>
 				<Header />
 				<main className='py-[100px]'>{children}</main>
 			</body>

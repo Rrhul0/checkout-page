@@ -15,7 +15,8 @@ module.exports = {
 			colors: {
 				'grayscale-g-2': '#474747',
 				'grayscale-g-3': '#595959',
-				'grayscale-g-6': '#D6D6D6'
+				'grayscale-g-6': '#D6D6D6',
+				'grayscale-g-8': '#F5F5F5'
 			}
 		}
 	},
