@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import cardImage from '@/public/card.svg'
 import klarnaImage from '@/public/klarna.svg'
+import shieldImage from '@/public/shield.svg'
 
 export default function Home() {
 	const [paymentMethod, setPaymentMethod] = useState<'card' | 'klarna'>(
@@ -11,7 +12,7 @@ export default function Home() {
 	)
 
 	return (
-		<form className='flex flex-col gap-16'>
+		<form className='flex flex-col gap-12'>
 			<h2 className='text-5xl font-semibold'>Confirm and pay</h2>
 			<div>
 				<div className='pb-8'>
@@ -64,7 +65,9 @@ export default function Home() {
 							height={24}
 							alt='card image'
 						/>
-						<span>Credit & debit card</span>
+						<span className='font-semibold'>
+							Credit & debit card
+						</span>
 					</label>
 					<input
 						id='card'
@@ -99,7 +102,7 @@ export default function Home() {
 							height={24}
 							alt='klarna image'
 						/>
-						<span>Klarna</span>
+						<span className='font-semibold'>Klarna</span>
 					</label>
 					<input
 						id='klarna'
@@ -111,6 +114,42 @@ export default function Home() {
 					/>
 				</div>
 				<div className='border-t' />
+			</div>
+			<div>
+				<p className='text-xl font-semibold'>Total: &lt;price&gt;</p>
+				<p className='text-xs text-grayscale-g-3 underline underline-offset-2'>
+					You will pay in &lt;currency&gt;
+				</p>
+			</div>
+			<div>
+				<div className='rounded-lg bg-grayscale-g-8 h-12 flex items-center text-xs font-semibold px-4 gap-3'>
+					<input
+						id='subscribe-email'
+						type='checkbox'
+					/>
+					<label htmlFor='subscribe-email'>
+						Receive travel tips, suggestions and offers in
+						&lt;city&gt; by email
+					</label>
+				</div>
+				<p className='text-xs leading-5 text-grayscale-g-3 pt-[22px]'>
+					With payment, you agree to the general{' '}
+					<a className='text-blue-crayola/9'>terms and conditions</a>{' '}
+					of Tickete & the{' '}
+					<a className='text-blue-crayola/9'>activity provider</a>.
+				</p>
+				<button
+					type='submit'
+					className='text-grayscale-g-9 bg-black-fogra rounded-xl px-5 h-12 flex gap-2 items-center mt-3'
+				>
+					<span>Confirm and pay</span>
+					<Image
+						src={shieldImage}
+						alt='secured'
+						width={20}
+						height={20}
+					/>
+				</button>
 			</div>
 		</form>
 	)
