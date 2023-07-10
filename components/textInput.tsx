@@ -4,7 +4,7 @@ type Props = {
 
 export default function TextInput({ lebel }: Props) {
 	return (
-		<div className='relative h-10 w-full min-w-[200px]'>
+		<div className='relative h-12 w-full min-w-[200px]'>
 			<input
 				className='peer h-full w-full rounded-[7px] border border-t-transparent border-grayscale-g-6 bg-transparent px-4 py-6 font-sans text-sm font-normal text-grayscale-g-2 outline-none outline-0 transition-all placeholder-shown:border placeholder-shown:border-grayscale-g-6 focus:border focus:border-t-transparent focus:outline-0'
 				placeholder=' '

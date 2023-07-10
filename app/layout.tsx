@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={`${inter.className} px-40`}>
+			<body className={`${inter.className} px-40 text-grayscale-g-2`}>
 				<Header />
 				<main className='py-[100px]'>{children}</main>
 			</body>
