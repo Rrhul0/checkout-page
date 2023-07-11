@@ -14,6 +14,7 @@ module.exports = {
 			},
 			colors: {
 				'blue-crayola/9': '#1733B6',
+				'green-sacramento/9': '#006642',
 				'grayscale-g-2': '#474747',
 				'grayscale-g-3': '#595959',
 				'grayscale-g-6': '#D6D6D6',

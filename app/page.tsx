@@ -5,6 +5,11 @@ import { useState } from 'react'
 import cardImage from '@/public/card.svg'
 import klarnaImage from '@/public/klarna.svg'
 import shieldImage from '@/public/shield.svg'
+import ticketItemImage from '@/public/ticketItemImage.png'
+import ticketImage from '@/public/ticket.svg'
+import calanderImage from '@/public/calander.svg'
+import clockImage from '@/public/clock.svg'
+import tagImage from '@/public/tag.svg'
 
 export default function Home() {
 	const [paymentMethod, setPaymentMethod] = useState<'card' | 'klarna'>(
@@ -12,145 +17,255 @@ export default function Home() {
 	)
 
 	return (
-		<form className='flex flex-col gap-12'>
-			<h2 className='text-5xl font-semibold'>Confirm and pay</h2>
-			<div>
-				<div className='pb-8'>
-					<p className='text-2xl font-semibold'>Enter your details</p>
-					<p>
-						We&apos;ll be sending your tickets to the details below.
-						Booking for a friend? Add their details.
-					</p>
+		<div className='flex gap-6'>
+			<form className='flex flex-col gap-12 flex-1'>
+				<h2 className='text-5xl font-semibold'>Confirm and pay</h2>
+				<div>
+					<div className='pb-8'>
+						<p className='text-2xl font-semibold'>
+							Enter your details
+						</p>
+						<p>
+							We&apos;ll be sending your tickets to the details
+							below. Booking for a friend? Add their details.
+						</p>
+					</div>
+					<div className='flex flex-col gap-7'>
+						<div className='flex gap-6'>
+							<TextInput lebel='Full Name' />
+							<TextInput lebel='Phone number' />
+						</div>
+						<div className='flex gap-6'>
+							<TextInput lebel='Email' />
+							<TextInput lebel='Username' />
+						</div>
+					</div>
 				</div>
-				<div className='flex flex-col gap-7'>
-					<div className='flex gap-6'>
-						<TextInput lebel='Full Name' />
-						<TextInput lebel='Phone number' />
+				<div>
+					<div className='pb-8'>
+						<p className='text-2xl font-semibold'>
+							Additional information
+						</p>
+						<p>
+							We need a few more details to complete your
+							reservation.
+						</p>
 					</div>
 					<div className='flex gap-6'>
 						<TextInput lebel='Email' />
 						<TextInput lebel='Username' />
 					</div>
 				</div>
-			</div>
-			<div>
-				<div className='pb-8'>
-					<p className='text-2xl font-semibold'>
-						Additional information
-					</p>
-					<p>
-						We need a few more details to complete your reservation.
-					</p>
-				</div>
-				<div className='flex gap-6'>
-					<TextInput lebel='Email' />
-					<TextInput lebel='Username' />
-				</div>
-			</div>
-			<div className='flex flex-col gap-6'>
-				<div className='pb-2'>
-					<p className='text-2xl font-semibold'>
-						Select your mode of payment
-					</p>
-					<p>Payments with Tickete are secure and encrypted.</p>
-				</div>
-				<div className='flex justify-between'>
-					<label
-						htmlFor='card'
-						className='w-full flex gap-5'
-					>
-						<Image
-							src={cardImage}
-							width={24}
-							height={24}
-							alt='card image'
+				<div className='flex flex-col gap-6'>
+					<div className='pb-2'>
+						<p className='text-2xl font-semibold'>
+							Select your mode of payment
+						</p>
+						<p>Payments with Tickete are secure and encrypted.</p>
+					</div>
+					<div className='flex justify-between'>
+						<label
+							htmlFor='card'
+							className='w-full flex gap-5'
+						>
+							<Image
+								src={cardImage}
+								width={24}
+								height={24}
+								alt='card image'
+							/>
+							<span className='font-semibold'>
+								Credit & debit card
+							</span>
+						</label>
+						<input
+							id='card'
+							type='radio'
+							value='card'
+							name='payment'
+							checked={paymentMethod === 'card'}
+							onChange={() => setPaymentMethod('card')}
 						/>
-						<span className='font-semibold'>
-							Credit & debit card
-						</span>
-					</label>
-					<input
-						id='card'
-						type='radio'
-						value='card'
-						name='payment'
-						checked={paymentMethod === 'card'}
-						onClick={() => setPaymentMethod('card')}
-					/>
-				</div>
-				{paymentMethod === 'card' && (
-					<div className='flex flex-col gap-7'>
-						<div className='flex gap-6'>
-							<TextInput lebel='Name on Card' />
-							<TextInput lebel='Card Number' />
+					</div>
+					{paymentMethod === 'card' && (
+						<div className='flex flex-col gap-7'>
+							<div className='flex gap-6'>
+								<TextInput lebel='Name on Card' />
+								<TextInput lebel='Card Number' />
+							</div>
+							<div className='flex gap-6'>
+								<TextInput lebel='Expiry Date' />
+								<TextInput lebel='CVV/CVC' />
+							</div>
 						</div>
-						<div className='flex gap-6'>
-							<TextInput lebel='Expiry Date' />
-							<TextInput lebel='CVV/CVC' />
+					)}
+					<div className='border-t' />
+					<div className='flex justify-between'>
+						<label
+							htmlFor='klarna'
+							className='w-full flex gap-5'
+						>
+							<Image
+								src={klarnaImage}
+								width={24}
+								height={24}
+								alt='klarna image'
+							/>
+							<span className='font-semibold'>Klarna</span>
+						</label>
+						<input
+							id='klarna'
+							type='radio'
+							value='klarna'
+							name='payment'
+							checked={paymentMethod === 'klarna'}
+							onChange={() => setPaymentMethod('klarna')}
+						/>
+					</div>
+					<div className='border-t' />
+				</div>
+				<div>
+					<p className='text-xl font-semibold'>
+						Total: &lt;price&gt;
+					</p>
+					<p className='text-xs text-grayscale-g-3 underline underline-offset-2'>
+						You will pay in &lt;currency&gt;
+					</p>
+				</div>
+				<div>
+					<div className='rounded-lg bg-grayscale-g-8 h-12 flex items-center text-xs font-semibold px-4 gap-3'>
+						<input
+							id='subscribe-email'
+							type='checkbox'
+						/>
+						<label htmlFor='subscribe-email'>
+							Receive travel tips, suggestions and offers in
+							&lt;city&gt; by email
+						</label>
+					</div>
+					<p className='text-xs leading-5 text-grayscale-g-3 pt-[22px]'>
+						With payment, you agree to the general{' '}
+						<a className='text-blue-crayola/9'>
+							terms and conditions
+						</a>{' '}
+						of Tickete & the{' '}
+						<a className='text-blue-crayola/9'>activity provider</a>
+						.
+					</p>
+					<button
+						type='submit'
+						className='text-grayscale-g-9 bg-black-fogra rounded-xl px-5 h-12 flex gap-2 items-center mt-3'
+					>
+						<span>Confirm and pay</span>
+						<Image
+							src={shieldImage}
+							alt='secured'
+							width={20}
+							height={20}
+						/>
+					</button>
+				</div>
+			</form>
+			<div className='border-l' />
+			<div className='w-80'>
+				<div>
+					<Image
+						src={ticketItemImage.src}
+						width={ticketItemImage.width}
+						height={ticketItemImage.height}
+						alt='item image'
+					/>
+					<p className='text-lg tracking-tighter font-semibold mt-3'>
+						Amsterdam opeg boat canal cruise - Live Ggide - from
+						Anne Frgnk House
+					</p>
+					<div className='py-6 flex flex-col gap-3'>
+						<div className='flex gap-4'>
+							<Image
+								src={ticketImage}
+								width={24}
+								height={24}
+								alt='ticket'
+							/>
+							<span className='font-semibold leading-5'>
+								&lt;variant name&gt;
+							</span>
+						</div>
+						<div className='flex gap-4'>
+							<Image
+								src={calanderImage}
+								width={24}
+								height={24}
+								alt='calander'
+							/>
+							<span className='font-semibold leading-5'>
+								&lt;date&gt;
+							</span>
+						</div>
+						<div className='flex gap-4'>
+							<Image
+								src={clockImage}
+								width={24}
+								height={24}
+								alt='clock'
+							/>
+							<span className='font-semibold leading-5'>
+								&lt;time&gt;
+							</span>
 						</div>
 					</div>
-				)}
-				<div className='border-t' />
-				<div className='flex justify-between'>
-					<label
-						htmlFor='klarna'
-						className='w-full flex gap-5'
-					>
+					<div className='border-b' />
+				</div>
+				<div className='pt-12'>
+					<p className='text-lg tracking-tight font-semibold'>
+						Tickets overview
+					</p>
+					<div className='flex flex-col gap-4 pt-8 pb-3'>
+						<div className='flex'>
+							<span className='flex-1'>&lt;pax type&gt;</span>
+							<span>&lt;price&gt;</span>
+						</div>
+						<div className='flex'>
+							<span className='flex-1'>&lt;pax type&gt;</span>
+							<span>&lt;price&gt;</span>
+						</div>
+						<div className='flex'>
+							<span className='flex-1'>&lt;pax type&gt;</span>
+							<span>&lt;price&gt;</span>
+						</div>
+						<div className='flex text-green-sacramento/9'>
+							<span className='flex-1'>
+								&lt;discount applied&gt;
+							</span>
+							<span>&lt;-price&gt;</span>
+						</div>
+					</div>
+					<div className='flex gap-3 py-6 border-y text-green-sacramento/9 font-semibold text-sm leading-4 underline'>
 						<Image
-							src={klarnaImage}
-							width={24}
-							height={24}
-							alt='klarna image'
+							src={tagImage}
+							height={20}
+							width={20}
+							alt='tag'
 						/>
-						<span className='font-semibold'>Klarna</span>
-					</label>
-					<input
-						id='klarna'
-						type='radio'
-						value='klarna'
-						name='payment'
-						checked={paymentMethod === 'klarna'}
-						onClick={() => setPaymentMethod('klarna')}
-					/>
+						<button>Have a promo code?</button>
+					</div>
+					<div className='py-6'>
+						<div className='flex leading-5 font-semibold'>
+							<span className='flex-1 '>Total</span>
+							<span>&lt;price&gt;</span>
+						</div>
+						<p className='text-xs text-grayscale-g-3 underline underline-offset-2'>
+							You will pay in &lt;currency&gt;
+						</p>
+					</div>
+					<div className='px-5 py-4 bg-grayscale-g-8 rounded-xl text-sm leading-4'>
+						<p className='font-semibold'>Free cancellation</p>
+						<p className='leading-[22px] text-grayscale-g-3'>
+							Cancel before &lt;date&gt; for a full refund
+						</p>
+					</div>
 				</div>
-				<div className='border-t' />
 			</div>
-			<div>
-				<p className='text-xl font-semibold'>Total: &lt;price&gt;</p>
-				<p className='text-xs text-grayscale-g-3 underline underline-offset-2'>
-					You will pay in &lt;currency&gt;
-				</p>
-			</div>
-			<div>
-				<div className='rounded-lg bg-grayscale-g-8 h-12 flex items-center text-xs font-semibold px-4 gap-3'>
-					<input
-						id='subscribe-email'
-						type='checkbox'
-					/>
-					<label htmlFor='subscribe-email'>
-						Receive travel tips, suggestions and offers in
-						&lt;city&gt; by email
-					</label>
-				</div>
-				<p className='text-xs leading-5 text-grayscale-g-3 pt-[22px]'>
-					With payment, you agree to the general{' '}
-					<a className='text-blue-crayola/9'>terms and conditions</a>{' '}
-					of Tickete & the{' '}
-					<a className='text-blue-crayola/9'>activity provider</a>.
-				</p>
-				<button
-					type='submit'
-					className='text-grayscale-g-9 bg-black-fogra rounded-xl px-5 h-12 flex gap-2 items-center mt-3'
-				>
-					<span>Confirm and pay</span>
-					<Image
-						src={shieldImage}
-						alt='secured'
-						width={20}
-						height={20}
-					/>
-				</button>
-			</div>
-		</form>
+		</div>
 	)
 }
