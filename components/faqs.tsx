@@ -44,7 +44,7 @@ const FAQS: FaqType[] = [
 
 export default function Faqs() {
 	return (
-		<div className='pt-16 flex-1'>
+		<div className='flex-1'>
 			<h3 className='text-2xl tracking-[-0.48px] font-semibold'>
 				Frequently asked questions
 			</h3>
