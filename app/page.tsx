@@ -22,6 +22,9 @@ export default function Home() {
 				</div>
 				<div className='border-b mt-6' />
 			</div>
+			<div>
+				<TicketePromise />
+			</div>
 		</div>
 	)
 }
