@@ -1,4 +1,5 @@
 import Faqs from '@/components/faqs'
+import Help from '@/components/help'
 import PaymentForm from '@/components/paymentForm'
 import TicketInformation from '@/components/ticketInformation'
 
@@ -11,9 +12,9 @@ export default function Home() {
 				<TicketInformation />
 			</div>
 			<div className='border-b mt-6' />
-			<div className='flex gap-32'>
+			<div className='flex gap-32 items-start'>
 				<Faqs />
-				<div className='w-[360px]'></div>
+				<Help />
 			</div>
 		</div>
 	)
