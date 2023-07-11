@@ -1,4 +1,5 @@
 import Header from '@/components/header'
+import Footer from '@/components/footer'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
@@ -17,9 +18,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={`${openSans.className} px-40 text-grayscale-g-2`}>
-				<Header />
-				<main className='py-[100px]'>{children}</main>
+			<body className={`${openSans.className} text-grayscale-g-2`}>
+				<div className='px-[120px]'>
+					<Header />
+					<main className='py-[100px]'>{children}</main>
+				</div>
+				<Footer />
 			</body>
 		</html>
 	)

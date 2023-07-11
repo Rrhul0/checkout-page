@@ -19,7 +19,9 @@ module.exports = {
 				'pumpkin/10': '#7F2D0F',
 				'grayscale-g-2': '#474747',
 				'grayscale-g-3': '#595959',
+				'grayscale-g-5': '#999999',
 				'grayscale-g-6': '#D6D6D6',
+				'grayscale-g-7': '#EBEBEB',
 				'grayscale-g-8': '#F5F5F5',
 				'grayscale-g-9': '#F6F6F7',
 				'black-fogra': '#0A0A0A'
