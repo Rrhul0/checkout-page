@@ -45,19 +45,16 @@ const FAQS: FaqType[] = [
 export default function Faqs() {
 	return (
 		<div className='flex-1'>
-			<h3 className='text-2xl tracking-[-0.48px] font-semibold'>
+			<h3 className='text-lg md:text-2xl tracking-[-0.36px] md:tracking-[-0.48px] font-semibold'>
 				Frequently asked questions
 			</h3>
-			<ol className='flex-1 pt-8'>
+			<ol className='flex-1 md:pt-8'>
 				{FAQS.map((faq, index) => (
 					<div
 						key={index}
-						className='flex flex-col gap-6'
+						className='flex flex-col gap-6 after:border-b after:border-grayscale-g-6 md:last:after:border-none'
 					>
 						<Faq faq={faq} />
-						{index <= FAQS.length - 2 && (
-							<div className='border-b' />
-						)}
 					</div>
 				))}
 			</ol>
@@ -70,10 +67,10 @@ function Faq({ faq }: { faq: FaqType }) {
 	return (
 		<li className='flex flex-col gap-3 pt-6'>
 			<button
-				className='flex w-full'
+				className='flex w-full gap-4'
 				onClick={() => setOpen(o => !o)}
 			>
-				<span className='flex-1 text-left text-lg font-semibold'>
+				<span className='flex-1 text-left text-sm md:text-lg font-semibold'>
 					{faq.question}
 				</span>
 				<Image
@@ -83,7 +80,11 @@ function Faq({ faq }: { faq: FaqType }) {
 					height={20}
 				/>
 			</button>
-			<p className={`${isOpen ? 'block' : 'hidden'} text-grayscale-g-3`}>
+			<p
+				className={`${
+					isOpen ? 'block' : 'hidden'
+				} text-xs md:text-base text-grayscale-g-3`}
+			>
 				{faq.answer}
 			</p>
 		</li>
