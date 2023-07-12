@@ -48,7 +48,7 @@ export default function Faqs() {
 			<h3 className='text-lg md:text-2xl tracking-[-0.36px] md:tracking-[-0.48px] font-semibold'>
 				Frequently asked questions
 			</h3>
-			<ol className='flex-1 md:pt-8'>
+			<ol className='flex-1 md:pt-2'>
 				{FAQS.map((faq, index) => (
 					<div
 						key={index}

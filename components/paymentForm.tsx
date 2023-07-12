@@ -12,7 +12,7 @@ export default function PaymentForm() {
 	)
 
 	return (
-		<form className='flex flex-col gap-5 md:gap-12 flex-1 px-6 sm:px-16'>
+		<form className='flex flex-col gap-5 md:gap-12 flex-1 px-6 sm:px-16 md:px-0'>
 			<h2 className='text-5xl font-semibold hidden md:block'>
 				Confirm and pay
 			</h2>

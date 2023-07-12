@@ -8,7 +8,7 @@ import tagImage from '@/public/tag.svg'
 export default function TicketInformation() {
 	return (
 		<div>
-			<div className='px-6 sm:px-16 md:w-80'>
+			<div className='px-6 sm:px-16 md:px-0 md:w-80'>
 				<h2 className='text-4xl font-semibold md:hidden pb-10'>
 					Confirm and pay
 				</h2>
