@@ -142,7 +142,7 @@ export default function PaymentForm() {
 				</p>
 				<button
 					type='submit'
-					className='text-grayscale-g-9 bg-black-fogra rounded-xl px-5 h-12 flex gap-2 items-center mt-3'
+					className='text-grayscale-g-9 bg-black-fogra rounded-xl px-5 h-12 flex gap-2 items-center mt-3 w-full justify-center sm:w-auto'
 				>
 					<span>Confirm and pay</span>
 					<Image
