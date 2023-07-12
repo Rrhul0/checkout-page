@@ -7,11 +7,11 @@ import twitterLogo from '@/public/twitter.svg'
 
 export default function Footer() {
 	return (
-		<footer className='bg-black-fogra px-[120px]'>
-			<h2 className='text-white text-4xl py-[66px]'>tickete</h2>
-			<div className='border-b border-grayscale-g-5' />
-			<div className='flex justify-between items-center'>
-				<div className='flex gap-3 text-grayscale-g-7 pt-8 pb-10'>
+		<footer className='bg-black-fogra px-6 sm:px-16 md:px-[120px]'>
+			<h2 className='text-white text-4xl py-10 md:py-[66px]'>tickete</h2>
+			<div className='border-b border-grayscale-g-5 hidden md:block' />
+			<div className='flex flex-col-reverse items-start md:flex-row justify-between md:items-center text-sm md:text-base'>
+				<div className='flex gap-3 text-grayscale-g-7 py-10'>
 					<a
 						href='#'
 						className=' underline'
