@@ -7,13 +7,12 @@ import TicketePromise from '@/components/ticketePromise'
 export default function Home() {
 	return (
 		<div className='flex flex-col gap-10 md:gap-16 w-full'>
-			<div>
-				<div className='flex flex-col-reverse  md:flex-row  gap-6'>
+			<div className='after:border-b after:border-grayscale-g-6 flex flex-col after:pt-6 '>
+				<div className='flex flex-col-reverse  md:flex-row  gap-6 '>
 					<PaymentForm />
-					<div className='border-l' />
+					<div className='border-l border-grayscale-g-6' />
 					<TicketInformation />
 				</div>
-				<div className='border-b mt-6' />
 			</div>
 			<div className='after:border-b after:border-grayscale-g-6 flex flex-col px-6 sm:px-16 md:px-0 after:pt-6 after:md:pt-0'>
 				<div className='flex flex-col md:flex-row  gap-10 md:gap-32 items-center md:items-start'>

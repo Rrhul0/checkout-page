@@ -12,7 +12,7 @@ export default function TicketePromise() {
 			</h3>
 			<div className='flex flex-col xl:flex-row gap-6'>
 				<div className='flex flex-col md:flex-row gap-6 w-full'>
-					<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
+					<div className='md:border border-grayscale-g-6 flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 						<Image
 							src={circleWavyCheck}
 							className='w-6 aspect-square md:w-12'
@@ -25,7 +25,7 @@ export default function TicketePromise() {
 							</p>
 						</div>
 					</div>
-					<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
+					<div className='md:border border-grayscale-g-6 flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 						<Image
 							src={chatImage}
 							className='w-6 aspect-square md:w-12'
@@ -42,7 +42,7 @@ export default function TicketePromise() {
 					</div>
 				</div>
 				<div className='flex flex-col md:flex-row gap-6 w-full'>
-					<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
+					<div className='md:border border-grayscale-g-6 flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 						<Image
 							src={calanderImage}
 							className='w-6 aspect-square md:w-12'
@@ -55,7 +55,7 @@ export default function TicketePromise() {
 							</p>
 						</div>
 					</div>
-					<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
+					<div className='md:border border-grayscale-g-6 flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 						<Image
 							src={shieldImage}
 							className='w-6 aspect-square md:w-12'
