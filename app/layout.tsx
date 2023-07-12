@@ -21,7 +21,7 @@ export default function RootLayout({
 			<body
 				className={`${openSans.className} text-grayscale-g-2 border-grayscale-g-6`}
 			>
-				<div className='md:px-[120px]'>
+				<div className='md:px-[10vw] lg:px-[120px]'>
 					<Header />
 					<main className='py-6 md:py-[100px] flex flex-col items-center'>
 						{children}
