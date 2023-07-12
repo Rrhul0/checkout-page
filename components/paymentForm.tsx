@@ -1,10 +1,10 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
-import TextInput from './textInput'
 import cardImage from '@/public/card.svg'
 import klarnaImage from '@/public/klarna.svg'
 import shieldImage from '@/public/shield.svg'
+import Input from './Input'
 
 export default function PaymentForm() {
 	const [paymentMethod, setPaymentMethod] = useState<'card' | 'klarna'>(
@@ -26,12 +26,18 @@ export default function PaymentForm() {
 				</div>
 				<div className='flex flex-col gap-6'>
 					<div className='flex flex-col md:flex-row gap-6'>
-						<TextInput lebel='Full Name' />
-						<TextInput lebel='Phone number' />
+						<Input label='Full Name' />
+						<Input
+							type='number'
+							label='Phone number'
+						/>
 					</div>
 					<div className='flex flex-col md:flex-row gap-6'>
-						<TextInput lebel='Email' />
-						<TextInput lebel='Username' />
+						<Input
+							type='email'
+							label='Email'
+						/>
+						<Input label='Username' />
 					</div>
 				</div>
 			</div>
@@ -45,8 +51,8 @@ export default function PaymentForm() {
 					</p>
 				</div>
 				<div className='flex flex-col md:flex-row gap-6'>
-					<TextInput lebel='Email' />
-					<TextInput lebel='Username' />
+					<Input label='Full Name' />
+					<Input label='Username' />
 				</div>
 			</div>
 			<div className='flex flex-col gap-6'>
@@ -83,12 +89,18 @@ export default function PaymentForm() {
 				{paymentMethod === 'card' && (
 					<div className='flex flex-col gap-7'>
 						<div className='flex flex-col md:flex-row gap-6'>
-							<TextInput lebel='Name on Card' />
-							<TextInput lebel='Card Number' />
+							<Input label='Name on Card' />
+							<Input
+								type='number'
+								label='Card Number'
+							/>
 						</div>
 						<div className='flex flex-col md:flex-row gap-6'>
-							<TextInput lebel='Expiry Date' />
-							<TextInput lebel='CVV/CVC' />
+							<Input label='Expiry Date' />
+							<Input
+								type='password'
+								label='CVV/CVC'
+							/>
 						</div>
 					</div>
 				)}
