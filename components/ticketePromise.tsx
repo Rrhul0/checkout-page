@@ -6,14 +6,15 @@ import shieldImage from '@/public/shieldBlue.svg'
 
 export default function TicketePromise() {
 	return (
-		<div className='flex flex-col gap-8'>
-			<h3 className='text-2xl font-semibold'>The Tickete promise</h3>
-			<div className='flex gap-6'>
-				<div className='border rounded-xl px-5 py-4 flex flex-col justify-between flex-1 h-[200px]'>
+		<div className='flex flex-col gap-6 md:gap-8 px-6 sm:px-16 md:px-0 pb-[50px] md:pb-0'>
+			<h3 className='text-lg md:text-2xl font-semibold'>
+				The Tickete promise
+			</h3>
+			<div className='flex flex-col md:flex-row gap-6'>
+				<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 					<Image
 						src={circleWavyCheck}
-						height={48}
-						width={48}
+						className='w-6 aspect-square md:w-12'
 						alt=''
 					/>
 					<div>
@@ -23,11 +24,10 @@ export default function TicketePromise() {
 						</p>
 					</div>
 				</div>
-				<div className='border rounded-xl px-5 py-4 flex flex-col justify-between flex-1 h-[200px]'>
+				<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 					<Image
 						src={chatImage}
-						height={48}
-						width={48}
+						className='w-6 aspect-square md:w-12'
 						alt=''
 					/>
 					<div>
@@ -39,11 +39,10 @@ export default function TicketePromise() {
 						</p>
 					</div>
 				</div>
-				<div className='border rounded-xl px-5 py-4 flex flex-col justify-between flex-1 h-[200px]'>
+				<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 					<Image
 						src={calanderImage}
-						height={48}
-						width={48}
+						className='w-6 aspect-square md:w-12'
 						alt=''
 					/>
 					<div>
@@ -53,11 +52,10 @@ export default function TicketePromise() {
 						</p>
 					</div>
 				</div>
-				<div className='border rounded-xl px-5 py-4 flex flex-col justify-between flex-1 h-[200px]'>
+				<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 					<Image
 						src={shieldImage}
-						height={48}
-						width={48}
+						className='w-6 aspect-square md:w-12'
 						alt=''
 					/>
 					<div>

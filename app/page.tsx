@@ -21,10 +21,10 @@ export default function Home() {
 					<Help />
 				</div>
 			</div>
-			{/*
+
 			<div>
 				<TicketePromise />
-			</div> */}
+			</div>
 		</div>
 	)
 }
