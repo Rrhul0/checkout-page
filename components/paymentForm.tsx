@@ -25,11 +25,11 @@ export default function PaymentForm() {
 					</p>
 				</div>
 				<div className='flex flex-col gap-6'>
-					<div className='flex flex-wrap gap-6'>
+					<div className='flex flex-col md:flex-row gap-6'>
 						<TextInput lebel='Full Name' />
 						<TextInput lebel='Phone number' />
 					</div>
-					<div className='flex flex-wrap gap-6'>
+					<div className='flex flex-col md:flex-row gap-6'>
 						<TextInput lebel='Email' />
 						<TextInput lebel='Username' />
 					</div>
@@ -44,7 +44,7 @@ export default function PaymentForm() {
 						We need a few more details to complete your reservation.
 					</p>
 				</div>
-				<div className='flex flex-wrap gap-6'>
+				<div className='flex flex-col md:flex-row gap-6'>
 					<TextInput lebel='Email' />
 					<TextInput lebel='Username' />
 				</div>
@@ -82,11 +82,11 @@ export default function PaymentForm() {
 				</div>
 				{paymentMethod === 'card' && (
 					<div className='flex flex-col gap-7'>
-						<div className='flex flex-wrap gap-6'>
+						<div className='flex flex-col md:flex-row gap-6'>
 							<TextInput lebel='Name on Card' />
 							<TextInput lebel='Card Number' />
 						</div>
-						<div className='flex flex-wrap gap-6'>
+						<div className='flex flex-col md:flex-row gap-6'>
 							<TextInput lebel='Expiry Date' />
 							<TextInput lebel='CVV/CVC' />
 						</div>

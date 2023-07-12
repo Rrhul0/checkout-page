@@ -10,8 +10,8 @@ export default function TicketePromise() {
 			<h3 className='text-lg md:text-2xl font-semibold'>
 				The Tickete promise
 			</h3>
-			<div className='flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap gap-6'>
-				<div className='flex flex-col md:flex-row gap-6 flex-grow'>
+			<div className='flex flex-col xl:flex-row gap-6'>
+				<div className='flex flex-col md:flex-row gap-6 w-full'>
 					<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 						<Image
 							src={circleWavyCheck}
@@ -41,7 +41,7 @@ export default function TicketePromise() {
 						</div>
 					</div>
 				</div>
-				<div className='flex flex-col md:flex-row gap-6 flex-grow'>
+				<div className='flex flex-col md:flex-row gap-6 w-full'>
 					<div className='md:border flex-row rounded-xl md:px-5 md:py-4 flex md:flex-col items-start gap-4 md:justify-between flex-1 h-[200px]'>
 						<Image
 							src={calanderImage}
