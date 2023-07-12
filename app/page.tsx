@@ -8,14 +8,14 @@ export default function Home() {
 	return (
 		<div className='flex flex-col gap-16'>
 			<div>
-				<div className='flex gap-6'>
+				<div className='flex flex-col-reverse  md:flex-row  gap-6'>
 					<PaymentForm />
 					<div className='border-l' />
 					<TicketInformation />
 				</div>
 				<div className='border-b mt-6' />
 			</div>
-			<div>
+			{/* <div>
 				<div className='flex gap-32 items-start'>
 					<Faqs />
 					<Help />
@@ -24,7 +24,7 @@ export default function Home() {
 			</div>
 			<div>
 				<TicketePromise />
-			</div>
+			</div> */}
 		</div>
 	)
 }

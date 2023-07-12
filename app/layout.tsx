@@ -18,10 +18,14 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={`${openSans.className} text-grayscale-g-2`}>
-				<div className='px-[120px]'>
+			<body
+				className={`${openSans.className} text-grayscale-g-2 border-grayscale-g-6`}
+			>
+				<div className='md:px-[120px]'>
 					<Header />
-					<main className='py-[100px]'>{children}</main>
+					<main className='py-6 md:py-[100px] flex flex-col items-center'>
+						{children}
+					</main>
 				</div>
 				<Footer />
 			</body>

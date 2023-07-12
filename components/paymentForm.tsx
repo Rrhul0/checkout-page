@@ -12,29 +12,31 @@ export default function PaymentForm() {
 	)
 
 	return (
-		<form className='flex flex-col gap-12 flex-1'>
-			<h2 className='text-5xl font-semibold'>Confirm and pay</h2>
+		<form className='flex flex-col gap-5 md:gap-12 flex-1 px-6 sm:px-16'>
+			<h2 className='text-5xl font-semibold hidden md:block'>
+				Confirm and pay
+			</h2>
 			<div>
-				<div className='pb-8'>
+				<div className='pb-6 md:pb-8 flex flex-col gap-2'>
 					<p className='text-2xl font-semibold'>Enter your details</p>
 					<p>
 						We&apos;ll be sending your tickets to the details below.
 						Booking for a friend? Add their details.
 					</p>
 				</div>
-				<div className='flex flex-col gap-7'>
-					<div className='flex gap-6'>
+				<div className='flex flex-col gap-6'>
+					<div className='flex flex-wrap gap-6'>
 						<TextInput lebel='Full Name' />
 						<TextInput lebel='Phone number' />
 					</div>
-					<div className='flex gap-6'>
+					<div className='flex flex-wrap gap-6'>
 						<TextInput lebel='Email' />
 						<TextInput lebel='Username' />
 					</div>
 				</div>
 			</div>
 			<div>
-				<div className='pb-8'>
+				<div className='pb-8 flex flex-col gap-2'>
 					<p className='text-2xl font-semibold'>
 						Additional information
 					</p>
@@ -42,13 +44,13 @@ export default function PaymentForm() {
 						We need a few more details to complete your reservation.
 					</p>
 				</div>
-				<div className='flex gap-6'>
+				<div className='flex flex-wrap gap-6'>
 					<TextInput lebel='Email' />
 					<TextInput lebel='Username' />
 				</div>
 			</div>
 			<div className='flex flex-col gap-6'>
-				<div className='pb-2'>
+				<div className='pb-2 flex flex-col gap-2'>
 					<p className='text-2xl font-semibold'>
 						Select your mode of payment
 					</p>
@@ -80,11 +82,11 @@ export default function PaymentForm() {
 				</div>
 				{paymentMethod === 'card' && (
 					<div className='flex flex-col gap-7'>
-						<div className='flex gap-6'>
+						<div className='flex flex-wrap gap-6'>
 							<TextInput lebel='Name on Card' />
 							<TextInput lebel='Card Number' />
 						</div>
-						<div className='flex gap-6'>
+						<div className='flex flex-wrap gap-6'>
 							<TextInput lebel='Expiry Date' />
 							<TextInput lebel='CVV/CVC' />
 						</div>
