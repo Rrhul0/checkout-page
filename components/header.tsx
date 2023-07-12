@@ -19,6 +19,7 @@ export default function Header() {
 				alt='back'
 				width={28}
 				height={28}
+				className='md:hidden'
 			/>
 			<div className='gap-1 hidden md:flex'>
 				<Image
